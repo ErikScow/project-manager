@@ -1,6 +1,6 @@
-const dotenv = require("dotenv");
-const express = require("express");
-const cors = require("cors");
+import dotenv from "dotenv";
+import express from "express";
+import cors from "cors";
 
 const server = express();
 
@@ -9,10 +9,6 @@ server.use(express.json());
 
 const port = process.env.PORT || 5000;
 
-server.listen(port, (err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log(`Server listening on port ${port}`);
-  }
+server.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
